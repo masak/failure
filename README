@@ -9,4 +9,26 @@ the name 'failure' seems fitting for this repository.
 
 Consider what's in here to be licensed under Artistic 2.0 for the time being.
 
--- Carl Mäsak
+= How it works
+
+I'm not sure why I'm explaining this. It's not like you're going to use the
+software to make a presentation or something.
+
+Ok, so here's a short explanation: it takes the list in the YAML file 'slides'
+and builds a bunch of numbered .pdf files. Each item in the list represents
+one slide. There are different types of item:
+
+- Just text. Gives you a slide with just text on it. Simple, really.
+- slide: code. Formats the text as a verbatim block of code.
+- slide: file. Pulls in an SVG file from the current directory.
+
+Now, this last type has an option 'gradual' which, when flipped on, causes
+the SVG file to be shown incrementally. I use this a lot. It shows the first
+element inside the SVG file, then the first and the second, etc. Each
+increment ends up as a separate slide.
+
+I do most of my SVG editing in Inkscape. But unless you're really careful,
+the elements will end up being in a jumbled order, and Inkscape also tends to
+include a lot of unnecessary crap in the beginning, producing blank slides.
+Because of this, I tend to edit the .svg files manually to get them the way I
+want. It's not as painful as it sounds, and the end result makes it worth it.
